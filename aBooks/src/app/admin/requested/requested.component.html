@@ -1,0 +1,25 @@
+    <ng-template #content>
+            <div style="padding-top:100px">
+                    <h3>Requested books</h3>
+                    <table class="responstable">
+                        <tr>
+                          <th>Name of the Book</th>
+                          <th style="padding-left:50px" >Requested By</th>
+                          <th style="padding-left:50px"></th>
+                        </tr>
+                        <tr *ngFor="let book of books; let id = index" style="padding-bottom:5px">
+                          <td><a>{{book.bookname}}</a></td>
+                          <td style="padding-left:50px">{{book.username}} </td>
+                          <td><form style="display:inline">                
+                                <button (click)="onAccept(book._id,book.userID)" class="btn btn-primary">Accept</button>
+                            </form></td>
+                            </tr>
+                            </table>
+                </div>
+    </ng-template>
+   
+<div *ngIf="books;then content else other">
+        <ng-template style="margin-top:80px" #other>
+            <h2  style="text-align:center">No books requested !!</h2>        
+        </ng-template>
+</div>

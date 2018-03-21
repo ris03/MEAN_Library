@@ -1,0 +1,11 @@
+<div *ngIf="book" style="padding-top:100px" class="container">
+<h3>Book Details</h3>
+<div>
+<h4>Name:  {{book.name}} </h4>
+  <h4>Total Units:  {{book.units}} </h4>
+  <h4>units issued:  {{book.issuedunits}}  </h4>
+  <h4>units available:  {{book.availableunits}} </h4>
+  <a class="btn btn-info" style="cursor:pointer;border-radius:50px;" (click)="onEditBook()">Edit Book</a>
+  <a class="btn btn-danger" style="cursor:pointer;border-radius:50px;" (click)="onDeleteBook()">Delete Book</a>
+</div> 
+</div>

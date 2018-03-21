@@ -1,0 +1,27 @@
+<div style="padding-top: 50px;" class="container">
+    <div style="width: 30%; margin: 25px auto;">
+       <h1 style="text-align: center"><i class="fas fa-user-plus"></i>  Register Yourself</h1>
+     <hr style="height: 12px;border: 0;box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)">
+       <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+           <div class="form-group">
+             <strong><label style="padding-left: 130px;">Name</label></strong>
+               <input style="border-radius: 50px" [ngModel]='name' class="form-control" type="text" name="name" placeholder="fullname">
+           </div>
+           <div  class="form-group">
+             <strong><label style="padding-left: 130px;">Branch</label></strong>
+               <input  style="border-radius: 50px"[ngModel]='branch' class="form-control" type="text" name="branch" placeholder="branch">
+           </div>
+           <div class="form-group">
+             <strong><label style="padding-left: 130px;">E-Mail</label></strong>
+               <input style="border-radius: 50px"[ngModel]='username' class="form-control" type="email" name="username" placeholder="e@mail.com">
+           </div>
+           <div class="form-group">
+             <strong><label style="padding-left: 130px;">Password</label></strong>
+               <input style="border-radius: 50px"[ngModel]='password' class="form-control" type="password" name="password" placeholder="New password">
+           </div>
+           <div class="form-group">
+               <button type="submit" style="border-radius: 50px" class="btn btn-lg btn-info btn-block">SignUp</button>
+           </div>
+       </form>
+   </div>
+ </div> 

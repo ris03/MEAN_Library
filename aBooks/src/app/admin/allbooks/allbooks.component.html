@@ -1,0 +1,22 @@
+<ng-template #e>
+  <h2  style="text-align:center;margin-top:80px">Bookless !!!!!</h2>      
+</ng-template>
+   <div *ngIf="books;else e" style="padding-top:100px">
+      <h3>List of All books</h3>
+      <table class="responstable">
+            <tr >
+              <th> BookName</th>
+              <th> 
+            </th>
+            </tr>
+            <tr *ngFor="let book of books; let id = index">
+                    <td>{{book.name}}</td>
+                    <td>  <form  style="padding-top:2px;" >                
+                            <button class="btn btn-success" [routerLink]="[book._id]" style="float:right;border-radius:50px;">Info</button>
+                        </form>
+                    </td>
+                  </tr>
+          </table>
+    </div>
+   
+      

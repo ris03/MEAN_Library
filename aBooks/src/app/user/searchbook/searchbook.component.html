@@ -1,0 +1,21 @@
+    <div>
+      <h1>Requested books</h1>
+                <table class="responstable">
+                        <tr>
+                          <th>Name of the Book</th>
+                          <th></th>
+                        </tr>
+                        <tr *ngFor="let book of books | search:name ">
+                          <td> {{book.name}}</td>
+                          <td>
+                            <form style="display:inline" *ngIf="book.availableunits > 0">                
+                              <button class="btn btn-primary" style="float:right">Issue</button>
+                          </form>
+                          <form style="display:inline" *ngIf="book.availableunits === 0" >                
+                              <button disabled="disabled" class="btn btn-primary" style="float:right">Issue</button>
+                          </form>   
+                        </td>
+                        </tr>
+                        </table>
+    </div>
+

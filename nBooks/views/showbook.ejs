@@ -1,0 +1,43 @@
+<% include ../partials/header %>
+
+<div class="ui segment" style="margin:auto;width:40%;background-color:lightgreen"  >
+    <h1>Book Details</h1>
+    <table class="ui definition table">
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td><%=foundBook.name%></td>
+          </tr>
+          <tr>
+            <td>Publisher</td>
+            <td><%=foundBook.publisher%></td>
+          </tr>
+          <tr>
+            <td>Author</td>
+            <td><%=foundBook.author%></td>
+          </tr>
+          <tr>
+            <td>Total Units</td>
+            <td><%=foundBook.units%></td>
+          </tr>
+          <tr>
+            <td>Units Issued</td>
+            <td><%=foundBook.issuedunits%></td>
+          </tr>
+          <tr>
+            <td>Units Available</td>
+            <td><%=foundBook.availableunits%></td>
+          </tr>
+      </tbody></table>
+    <form style="display:inline" action="/update/<%=foundBook._id%>" method="GET">                
+        <button class="btn btn-primary" >Update</button>
+    </form>
+    <form style="display:inline" action="/delete/<%=foundBook._id%>?_method=DELETE" method="POST">                
+        <button class="btn btn-danger" >Delete</button>
+    </form>
+    
+</div>
+<a href="/adminallbooks" class="ui green button" style="margin-left:15em">Back</a>
+
+
+<% include ../partials/footer %>

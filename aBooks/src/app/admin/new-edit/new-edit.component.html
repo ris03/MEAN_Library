@@ -1,0 +1,26 @@
+
+   <div style="padding-top: 50px;">
+            <h1 style="width: 60%; margin: 25px auto;padding-left:95px">Add a new book</h1>
+           <div>
+            <div style="width: 40%; margin: 25px auto;">
+                <h3 style="text-align: center"><i class="fas fa-plus-circle"></i>  Book Details</h3>
+                <hr style="height: 12px;border: 0;box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5)">
+                <form #bookForm="ngForm" (ngSubmit)="onSubmit(bookForm)">
+                    <div class="form-group">
+                        <strong><label style="padding-left: 110px;">Book Name</label></strong>
+                        <input style="border-radius: 50px" class="form-control" [ngModel]='name' type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <strong><label style="padding-left: 130px;">Genre</label></strong>
+                        <input style="border-radius: 50px" class="form-control" [ngModel]='genre' name="genre">
+                    </div>
+                     <div class="form-group">
+                        <strong><label style="padding-left: 110px;">No. Of Copies</label></strong>
+                        <input style="border-radius: 50px" class="form-control" type="number" [ngModel]='totalunits' name="totalunits">
+                    </div>
+                        <button type="submit" [disabled]="!bookForm.valid" style="border-radius: 50px" class="btn btn-lg btn-info btn-block">Save</button>
+                        <button type="button" class="btn btn-lg btn-danger btn-block" style="border-radius: 50px" (click)="onCancel()">Cancel</button>
+                </form>
+            </div>
+        </div>
+        </div> 

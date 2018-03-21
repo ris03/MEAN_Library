@@ -1,0 +1,10 @@
+                   <h1>List of all issued books</h1>
+                <table class="responstable" >
+       <tr *ngFor="let book of books">
+         <td>  {{book.name}}  </td>
+         <td style="padding-left:50px"> {{book.issuedon | date:'fullDate' }}</td>
+         <td style="padding-left:50px">                
+                         <button (click)="onReturn(book)" class="btn btn-danger" style="float:right;border-radius:50px">Return</button>
+                       </td>
+       </tr>
+                 
